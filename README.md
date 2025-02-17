@@ -29,15 +29,17 @@ The following assumptions are made to simplify the scope of the project:
 
 
 
-# Supported Models 
+# Supported Models
 
-| **Models**[[2]](https://unsloth.ai/blog/dynamic-4bit)                                                                         | **BERTScore** | **ROGUE** |
-|-------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|
-| [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |               |           |
-| [DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit) |               |           |
-| [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |               |           |
-| [QwQ-32B-Preview-unsloth-bnb-4bit](https://huggingface.co/unsloth/QwQ-32B-Preview-unsloth-bnb-4bit)                           |               |           |
-| [Qwen2.5-3B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-3B-Instruct-unsloth-bnb-4bit)                   |               |           |
+All supported models, listed in the table below are evaluated on the BERTScore [[7]](https://arxiv.org/abs/1904.09675) metric on the HotpotQA [[6]](https://hotpotqa.github.io/) test set.
+
+| **Models** [[2]](https://unsloth.ai/blog/dynamic-4bit)                                                                        | **BERTScore** [[7]](https://arxiv.org/abs/1904.09675)|
+|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |                                                      |
+| [DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit) |                                                      |
+| [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |                                                      |
+| [QwQ-32B-Preview-unsloth-bnb-4bit](https://huggingface.co/unsloth/QwQ-32B-Preview-unsloth-bnb-4bit)                           |                                                      |
+| [Qwen2.5-3B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-3B-Instruct-unsloth-bnb-4bit)                   |                                                      |
 
 # References
 [1] [I Built a Deep Research with Open Source—and So Can You!](https://milvus.io/blog/i-built-a-deep-research-with-open-source-so-can-you.md)
@@ -49,4 +51,8 @@ The following assumptions are made to simplify the scope of the project:
 [4] [Qwen](https://huggingface.co/Qwen)
 
 [5] [DeepSeek R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)
+
+[6] [HotpotQA - A Dataset for Diverse, Explainable Multi-hop Question Answering](https://hotpotqa.github.io/)
+
+[7] [BERTScore: Evaluating Text Generation with BERT](https://arxiv.org/abs/1904.09675)
 
