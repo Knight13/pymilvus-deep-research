@@ -20,6 +20,7 @@ langchain-huggingface = "0.1.2"
 langchain-community = "0.3.17"
 langchain-milvus = "0.1.8"
 json-repair = "0.37.0"
+bert-score = "0.3.13"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
