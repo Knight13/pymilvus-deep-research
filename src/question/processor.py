@@ -1,5 +1,5 @@
 from src.models.base_model import BaseReasoningModel
-from utils.json_utils import extract_json, leaves
+from src.utils.json_utils import extract_json, leaves
 
 class QuestionProcessor:
     def __init__(self, reasoning_model: BaseReasoningModel):
