@@ -23,7 +23,7 @@ json-repair = "0.37.0"
 bert-score = "0.3.13"
 transformers = "4.49.0"
 bitsandbytes = "*"
-xformers = "*"
+xformers = "0.0.27.post2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
