@@ -49,7 +49,7 @@ To run inference using the 4-bit models, run the following command:
 ```bash
 $ python main.py
 ```
-The choice of the model, query, page title and topic can set in `./configs/main.yaml` file.
+The choice of the model, query, page title and topic can be set in `./configs/main.yaml` file.
 
 
 # References
