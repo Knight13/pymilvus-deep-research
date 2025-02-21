@@ -3647,6 +3647,28 @@ files = [
 dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 
 [[package]]
+name = "xformers"
+version = "0.0.29.post3"
+description = "XFormers: A collection of composable Transformer building blocks."
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "xformers-0.0.29.post3-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:59c64379c015f36eb69947f1ee559a0ac8742159ef3d9b8e5a6d1519806d2101"},
+    {file = "xformers-0.0.29.post3-cp310-cp310-win_amd64.whl", hash = "sha256:34f13d69ad9404e44ae11169e99842c3fccdc2c75b1fc4831a70c78392d990db"},
+    {file = "xformers-0.0.29.post3-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:bbf2f500dfdbcf4649bf568cc2c9f434399f704dc4064fd1fbdbef2b524a8139"},
+    {file = "xformers-0.0.29.post3-cp311-cp311-win_amd64.whl", hash = "sha256:00f2dfd94c894ff6372e21bee3f09e96bce75b55649df366649c43f049eb7a1e"},
+    {file = "xformers-0.0.29.post3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:08fa92f3e06372c4ce2a5306c54ae3d4a3a399fc7e24e02aac3761112ec3aeed"},
+    {file = "xformers-0.0.29.post3-cp312-cp312-win_amd64.whl", hash = "sha256:3706eca371767ff9709595185910d809fc817ec3cf4234ef44d70d2b8844d7e2"},
+    {file = "xformers-0.0.29.post3-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:9ce9b96fbb3032be21e038e37b4bd6508e191c38561e99698204abd4acd1fa98"},
+    {file = "xformers-0.0.29.post3-cp39-cp39-win_amd64.whl", hash = "sha256:14cb310fa78fdbe68772ce55e624b6a75d5766b2450030da49baa61112b801f1"},
+    {file = "xformers-0.0.29.post3.tar.gz", hash = "sha256:0b77c67ecc3c9fdd8a0e4399e675adf12e2ff40285e00974cca2d09108157f60"},
+]
+
+[package.dependencies]
+numpy = "*"
+torch = "2.6.0"
+
+[[package]]
 name = "yarl"
 version = "1.18.3"
 description = "Yet another URL library"
@@ -3876,4 +3898,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "01c7432620aa4d16fa038626ba060390558568e16c2bd493ea20f916411176b0"
+content-hash = "feb5c84ea289c57ba5186fc96503ed9cae00b5b9c7abf0743e2085a47530b554"
