@@ -86,4 +86,4 @@ if __name__ == "__main__":
     envvar_prefix="DYNACONF",
     settings_files=[config_path],
     )
-    main()
+    main(cfg)
