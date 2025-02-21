@@ -1,0 +1,8 @@
+model_name: "unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit"
+query: "How has The Simpsons changed over time?"
+page_title: "The Simpsons"
+topic: ("The evolution of The Simpsons as a show over time, covering changes in content, humor", "character development, animation, and its role in society.")
+doc_chunk_size: 2000
+doc_chunk_overlap: 200
+report_file_path: "./reports/report.md"
+answers_file_path: "./reports/answers.pkl"
