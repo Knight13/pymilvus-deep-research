@@ -36,9 +36,7 @@ All supported models, listed in the table below are evaluated on the BERTScore [
 | **Models** [[2]](https://unsloth.ai/blog/dynamic-4bit)                                                                        | **BERTScore** [[7]](https://arxiv.org/abs/1904.09675)|
 |-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |          ToDo                                        |
-| [DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit) |          ToDo                                        |
 | [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |          ToDo                                        |
-| [QwQ-32B-Preview-unsloth-bnb-4bit](https://huggingface.co/unsloth/QwQ-32B-Preview-unsloth-bnb-4bit)                           |          ToDo                                        |
 | [Qwen2.5-3B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-3B-Instruct-unsloth-bnb-4bit)                   |          ToDo                                        |
 
 
