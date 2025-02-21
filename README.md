@@ -35,11 +35,22 @@ All supported models, listed in the table below are evaluated on the BERTScore [
 
 | **Models** [[2]](https://unsloth.ai/blog/dynamic-4bit)                                                                        | **BERTScore** [[7]](https://arxiv.org/abs/1904.09675)|
 |-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |                                                      |
-| [DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit) |                                                      |
-| [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |                                                      |
-| [QwQ-32B-Preview-unsloth-bnb-4bit](https://huggingface.co/unsloth/QwQ-32B-Preview-unsloth-bnb-4bit)                           |                                                      |
-| [Qwen2.5-3B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-3B-Instruct-unsloth-bnb-4bit)                   |                                                      |
+| [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |          ToDo                                        |
+| [DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-unsloth-bnb-4bit) |          ToDo                                        |
+| [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |          ToDo                                        |
+| [QwQ-32B-Preview-unsloth-bnb-4bit](https://huggingface.co/unsloth/QwQ-32B-Preview-unsloth-bnb-4bit)                           |          ToDo                                        |
+| [Qwen2.5-3B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-3B-Instruct-unsloth-bnb-4bit)                   |          ToDo                                        |
+
+
+# Usage
+
+To run inference using the 4-bit models, run the following command:
+
+```bash
+$ python main.py
+```
+The choice of the model, query, page title and topic can set in `./configs/main.yaml` file.
+
 
 # References
 [1] [I Built a Deep Research with Open Source—and So Can You!](https://milvus.io/blog/i-built-a-deep-research-with-open-source-so-can-you.md)
@@ -56,3 +67,7 @@ All supported models, listed in the table below are evaluated on the BERTScore [
 
 [7] [BERTScore: Evaluating Text Generation with BERT](https://arxiv.org/abs/1904.09675)
 
+# ToDo:
+
+* Add evaluation script
+* Evaluate DeepSeek-R1 and Qwen models on HotpotQA test set
