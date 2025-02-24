@@ -7,25 +7,24 @@ authors = ["Your Name <you@example.com>"]
 
 
 [tool.poetry.dependencies]
-python = "~3.9"
+python = "~3.11"
 dynaconf = "*"
-tabulate = "0.9.0"
-loguru = "0.7.2"
-psutil = "5.9.0"
-tqdm = "4.65.0"
+tqdm = "*"
 pymilvus = "2.5.4"
-unsloth = "*"
+unsloth = "2025.2.15"
+unsloth-zoo = "2025.2.7"
+torch = "2.4.1"
 Wikipedia-API = "0.8.1"
 langchain-huggingface = "0.1.2"
-langchain-community = "0.3.17"
+langchain-community = "0.3.18"
 langchain-milvus = "0.1.8"
 json-repair = "0.37.0"
 bert-score = "0.3.13"
 transformers = "4.48.2"
-bitsandbytes = "*"
-xformers = "0.0.25.post1"
-trl = "0.8.5"
-peft = "0.11.1"
+bitsandbytes = "0.45.2"
+xformers = "0.0.28"
+trl = "0.15.1"
+peft = "0.14.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
