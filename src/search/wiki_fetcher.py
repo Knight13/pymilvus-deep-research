@@ -5,4 +5,4 @@ class WikipediaFetcher:
         self.wiki = wikipediaapi.Wikipedia(language=language, user_agent=user_agent)
 
     def get_page(self, page_title: str):
-        return self.wiki.page([page_title])
+        return self.wiki.page(page_title)
