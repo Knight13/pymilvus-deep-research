@@ -52,7 +52,7 @@ def main(cfg: object):
     llm = Pipeline(pipeline=hf_pipeline)
     
     # Set up the retrieval-augmented generation chain.
-    rag_chain = RetrievalAugmentedGenerationChain(llm=llm, retriever=vectorstore.as_retriever(), docs=relevant_docs)
+    rag_chain = RetrievalAugmentedGenerationChain(llm=llm, retriever=vectorstore.as_retriever())
     
     # Generate answers for each (sub-)question.
     answers = {}

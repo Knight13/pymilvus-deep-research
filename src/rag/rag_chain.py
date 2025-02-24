@@ -3,7 +3,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 class RetrievalAugmentedGenerationChain:
-    def __init__(self, llm, retriever, docs):
+    def __init__(self, llm, retriever):
         self.llm = llm
         self.retriever = retriever
         self.prompt_template = """
@@ -20,7 +20,6 @@ class RetrievalAugmentedGenerationChain:
         $/question$
         """
         self.prompt = PromptTemplate(template=self.prompt_template, input_variables=["question"])
-        self.docs = docs
         self.rag_chain = (
         {"context": self.retriever | self.format_docs, "question": RunnablePassthrough()}
         | self.prompt
@@ -28,8 +27,8 @@ class RetrievalAugmentedGenerationChain:
         | StrOutputParser()
         )
 
-    def format_docs(self):
-        return "\n\n".join(doc.page_content for doc in self.docs)
+    def format_docs(self, docs):
+        return "\n\n".join(doc.page_content for doc in docs)
 
     def generate_answer(self, question: str):
         # Generate an answer using the rag_chain.
