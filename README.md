@@ -1,4 +1,4 @@
-![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg) ![Poetry 1.8.3](https://img.shields.io/badge/poetry-1.8.3-blue.svg?logo=poetry) ![Pymilvus 2.5.4](https://img.shields.io/badge/PyMilvus-2.5.4-green) ![Unsloth 2025.2.12](https://img.shields.io/badge/Unsloth-2025.2.12-yellow)
+![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg) ![Poetry 1.8.3](https://img.shields.io/badge/poetry-1.8.3-blue.svg?logo=poetry) ![Pymilvus 2.5.4](https://img.shields.io/badge/PyMilvus-2.5.4-green) ![Unsloth 2025.2.12](https://img.shields.io/badge/Unsloth-2025.2.12-yellow)
 
 # pymilvus-deep-research
 
