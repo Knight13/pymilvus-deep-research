@@ -13,7 +13,7 @@ class LanguageReasoningModel(BaseReasoningModel):
         )
         FastLanguageModel.for_inference(self.model)
 
-    def generate(self, prompt: str, system_prompt: str = "You are a helpful assistant who answers questions truthfully to the best of your knowledge.") -> str:
+    def ask_model(self, prompt: str, system_prompt: str = "You are a helpful assistant who answers questions truthfully to the best of your knowledge.") -> str:
         chat = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},
