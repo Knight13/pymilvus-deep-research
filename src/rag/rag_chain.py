@@ -1,7 +1,9 @@
+from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 class RetrievalAugmentedGenerationChain:
-    def __init__(self, llm, retriever):
+    def __init__(self, llm, retriever, docs):
         self.llm = llm
         self.retriever = retriever
         self.prompt_template = """
@@ -18,15 +20,18 @@ class RetrievalAugmentedGenerationChain:
         $/question$
         """
         self.prompt = PromptTemplate(template=self.prompt_template, input_variables=["question"])
+        self.docs = docs
+        self.rag_chain = (
+        {"context": self.retriever | self.format_docs, "question": RunnablePassthrough()}
+        | self.prompt
+        | self.llm
+        | StrOutputParser()
+        )
 
-    def format_docs(self, docs):
-        return "\n\n".join(doc.page_content for doc in docs)
+    def format_docs(self):
+        return "\n\n".join(doc.page_content for doc in self.docs)
 
     def generate_answer(self, question: str):
-        # Retrieve context based on the question.
-        docs = self.retriever.get_relevant_documents(question)
-        context = self.format_docs(docs)
-        chain_input = {"context": context, "question": question}
-        # Generate an answer using the provided LLM.
-        answer = self.llm(chain_input)
+        # Generate an answer using the rag_chain.
+        answer = self.rag_chain.invoke(question).split('</think>')[-1].strip()
         return answer

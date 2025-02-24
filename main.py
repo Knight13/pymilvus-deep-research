@@ -35,11 +35,11 @@ def main(cfg: object):
     wiki_fetcher = WikipediaFetcher()
     page = wiki_fetcher.get_page(cfg.page_title)
     doc_splitter = DocumentSplitter(cfg.doc_chunk_size, cfg.doc_chunk_overlap)
-    docs = doc_splitter.split(page.text)
+    relevant_docs = doc_splitter.split(page.text)
     
     # Build the vector store.
     vector_store_manager = VectorStoreManager(embedding=embedding_model.embeddings)
-    vectorstore = vector_store_manager.build_vectorstore(docs)
+    vectorstore = vector_store_manager.build_vectorstore(relevant_docs)
     
     # Set up a HuggingFace pipeline based LLM (you can swap this with another model as needed).
     hf_pipeline = transformers.pipeline(
@@ -50,10 +50,9 @@ def main(cfg: object):
          max_new_tokens=4048,
     )
     llm = Pipeline(pipeline=hf_pipeline)
-    chat = Chat(llm=llm)
     
     # Set up the retrieval-augmented generation chain.
-    rag_chain = RetrievalAugmentedGenerationChain(llm=llm, retriever=vectorstore.as_retriever())
+    rag_chain = RetrievalAugmentedGenerationChain(llm=llm, retriever=vectorstore.as_retriever(), docs=relevant_docs)
     
     # Generate answers for each (sub-)question.
     answers = {}

@@ -9,7 +9,7 @@ class QuestionProcessor:
     def ask(self, prompt: str, system_prompt: str = None) -> str:
         if system_prompt is None:
             system_prompt = self.default_system_prompt
-        return self.model.generate(prompt, system_prompt)
+        return self.model.ask_model(prompt, system_prompt)
 
     def extract_subquestions(self, question: str) -> list:
         prompt = f"""Break down the following question into intermediate sub-questions to approach answering it. Provide a list of intermediate sub-questions in JSON format. Do not directly answer the question.
