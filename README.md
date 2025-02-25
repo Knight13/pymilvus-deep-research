@@ -37,7 +37,7 @@ All supported models, listed in the table below are evaluated on the BERTScore [
 |-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |          ToDo                                        |
 | [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |          ToDo                                        |
-| [Qwen2.5-3B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-3B-Instruct-unsloth-bnb-4bit)                   |          ToDo                                        |
+| [Qwen2.5-1.5B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-1.5B-Instruct-unsloth-bnb-4bit)               |          ToDo                                        |
 
 
 # Usage
