@@ -1,0 +1,2 @@
+model_name: "unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit"
+num_samples: 10
