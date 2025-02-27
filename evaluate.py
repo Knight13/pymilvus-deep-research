@@ -3,6 +3,8 @@ from src.evaluation.evaluator import LanguageReasoningModelEvaluator
 from src.models.language_model import LanguageReasoningModel
 import torch
 from dynaconf import Dynaconf
+import fsspec
+fsspec.config.conf["default_timeout"] = 600
 
 def run_evaluation(cfg: object):
     # Load HotPotQA. Note: the original test set may not include ground truth answers.
