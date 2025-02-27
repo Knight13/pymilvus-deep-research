@@ -7,7 +7,7 @@ from dynaconf import Dynaconf
 def run_evaluation(cfg: object):
     # Load HotPotQA. Note: the original test set may not include ground truth answers.
     # If so, consider using the "dev" split.
-    dataset = load_dataset("hotpot_qa", "distractor", split="dev")
+    dataset = load_dataset("hotpot_qa", "distractor", split="dev", trust_remote_code=True)
     if cfg.num_samples in list(range(1, 7401)):
         dataset = dataset.select(range(cfg.num_samples))
     
