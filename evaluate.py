@@ -1,4 +1,4 @@
-from datasets import load_dataset
+from datasets import load_dataset, DownloadConfig
 from src.evaluation.evaluator import LanguageReasoningModelEvaluator
 from src.models.language_model import LanguageReasoningModel
 import torch
@@ -7,7 +7,8 @@ from dynaconf import Dynaconf
 def run_evaluation(cfg: object):
     # Load HotPotQA. Note: the original test set may not include ground truth answers.
     # If so, consider using the "dev" split.
-    dataset = load_dataset("hotpot_qa", "distractor", split="dev", trust_remote_code=True)
+    download_config = DownloadConfig(timeout=200)
+    dataset = load_dataset("hotpot_qa", "distractor", split="dev", trust_remote_code=True, download_config=download_config)
     if cfg.num_samples in list(range(1, 7401)):
         dataset = dataset.select(range(cfg.num_samples))
     
