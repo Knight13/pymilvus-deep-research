@@ -4,13 +4,13 @@ from src.models.language_model import LanguageReasoningModel
 import torch
 from dynaconf import Dynaconf
 import fsspec
-fsspec.config.conf["default_timeout"] = 600
+fsspec.config.conf["default_timeout"] = 6000
 
 def run_evaluation(cfg: object):
     # Load HotPotQA. Note: the original test set may not include ground truth answers.
     # If so, consider using the "dev" split.
-    download_config = DownloadConfig(max_retries=10)
-    dataset = load_dataset("hotpot_qa", "distractor", split="dev", trust_remote_code=True, download_config=download_config)
+    download_config = DownloadConfig(max_retries=10, resume_download=True, storage_options={"timeout": 6000})
+    dataset = load_dataset("hotpot_qa", "distractor", split="validation", trust_remote_code=True, download_config=download_config, download_mode="reuse_dataset_if_exists")
     if cfg.num_samples in list(range(1, 7401)):
         dataset = dataset.select(range(cfg.num_samples))
     
