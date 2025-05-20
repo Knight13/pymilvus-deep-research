@@ -39,7 +39,7 @@ def run_evaluation(cfg: object):
         ref = sample["answer"]
         
         # Generate the prediction (this call is synchronous; consider batching if needed).
-        pred = reasoning_model.generate(question)
+        pred = reasoning_model.ask_model(question)
         
         predictions.append(pred)
         references.append(ref)
