@@ -31,14 +31,13 @@ The following assumptions are made to simplify the scope of the project:
 
 # Supported Models
 
-All supported models, listed in the table below are evaluated on the BERTScore [[7]](https://arxiv.org/abs/1904.09675) metric on the HotpotQA [[6]](https://hotpotqa.github.io/) test set.
+All supported models, listed in the table below are evaluated on the BERTScore [[7]](https://arxiv.org/abs/1904.09675) metric on the HotpotQA [[6]](https://hotpotqa.github.io/) test set, each model evaluated on 10 samples.
 
-| **Models** [[2]](https://unsloth.ai/blog/dynamic-4bit)                                                                        | **BERTScore** [[7]](https://arxiv.org/abs/1904.09675)|
-|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |          ToDo                                        |
-| [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |          ToDo                                        |
-| [Qwen2.5-1.5B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-1.5B-Instruct-unsloth-bnb-4bit)               |          ToDo                                        |
-
+| **Models** [[2]](https://unsloth.ai/blog/dynamic-4bit)                                                                        | **BERTScore** Precision| **BERTScore** Recall   | **BERTScore** F1   |
+|-------------------------------------------------------------------------------------------------------------------------------|------------------------|------------------------|--------------------|
+| [DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit) |          0.7175        |          0.7928        |       0.7529       |
+| [DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit](https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-unsloth-bnb-4bit)   |          0.7187        |          0.7939        |       0.7539       |
+| [Qwen2.5-1.5B-Instruct-unsloth-bnb-4bit](https://huggingface.co/unsloth/Qwen2.5-1.5B-Instruct-unsloth-bnb-4bit)               |          0.7284        |          0.8001        |       0.7620       |
 
 # Usage
 
