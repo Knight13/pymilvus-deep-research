@@ -63,8 +63,3 @@ The choice of the model, query, page title and topic can be set in `./configs/ma
 [6] [HotpotQA - A Dataset for Diverse, Explainable Multi-hop Question Answering](https://hotpotqa.github.io/)
 
 [7] [BERTScore: Evaluating Text Generation with BERT](https://arxiv.org/abs/1904.09675)
-
-# ToDo:
-
-* Add evaluation script
-* Evaluate DeepSeek-R1 and Qwen models on HotpotQA test set
